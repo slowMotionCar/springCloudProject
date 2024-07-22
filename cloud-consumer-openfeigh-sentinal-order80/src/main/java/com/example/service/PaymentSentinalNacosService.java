@@ -13,8 +13,7 @@ import org.springframework.web.bind.annotation.PathVariable;
  * @Version: 1.0
  */
 @Component
-@FeignClient(value = "cloud-provider-sentinal-payment-service")
-public interface PaymentSentinalService {
+public interface PaymentSentinalNacosService {
     @GetMapping("/payment/hystrix/ok/{id}")
     String paymentInfo_OK(@PathVariable("id") Integer id);
 
